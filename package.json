@@ -1,0 +1,10 @@
+{
+    "name": "Museum",
+    "version": "0.0.0",
+    "description": "",
+    "dependencies": {
+        "express": "latest",
+		"uuid": "latest"
+    },
+    "author": "Brok Stafford"
+}
