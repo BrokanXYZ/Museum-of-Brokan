@@ -6,9 +6,10 @@ function setupCamera(){
     camera.attachControl(canvas, true);
 	camera.checkCollisions = true;
 	
-	camera.position.y = 2
-	camera.position.x = 0;
-	camera.position.z = -8;
+	camera.position.y = 2.425;
+	camera.position.x = -10;
+	camera.position.z = 0;
+	camera.rotation.y = Math.PI/2;
 	
 	//Aiming
 	camera.angularSensibility = 1000;
@@ -28,9 +29,10 @@ function movementLogic(){
 
 	// Create tracking box
 	trackingBox = BABYLON.Mesh.CreateBox("trackingBox", 10, scene);
-	trackingBox.position.y = 2;
-	trackingBox.position.x = 0;
-	trackingBox.position.z = -8;
+	trackingBox.position.y = 2.425;
+	trackingBox.position.x = -10;
+	trackingBox.position.z = 0;
+	trackingBox.rotation.y = Math.PI/2;
 	trackingBox.visibility = false;
 	trackingBox.isPickable = false;
 

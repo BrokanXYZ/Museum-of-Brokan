@@ -8,6 +8,9 @@ var camera;
 var trackingBox;
 
 
+var tempMatSetter;
+
+
 // Movement related vars
 var inclinedMeshes = [];
 var onInclinedSurface = false;
