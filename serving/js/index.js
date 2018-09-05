@@ -1,3 +1,6 @@
+
+var spectate = false;
+
 // Babylon vars
 var canvas; 
 var engine; 
@@ -7,8 +10,7 @@ var scene;
 var camera;
 var trackingBox;
 
-
-var tempMatSetter;
+var ring1, ring2, ring3, ring4, light0, shadowgenerator;
 
 
 // Movement related vars
@@ -24,7 +26,13 @@ var moveRight = false;
 //Entry point
 document.addEventListener("DOMContentLoaded", function() {
 	initializeBabylon();
-	setupCamera();
-    createWorld();
-	movementLogic();
+	
+	if(!spectate){
+		setupCamera();
+		movementLogic();
+	}else{
+		spectateCamera();
+	}
+	
+	createWorld();
 });

@@ -1,4 +1,21 @@
 
+function spectateCamera(){
+	camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(45, 71, -48), scene);
+	//camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(0, 10, 0), scene);
+	camera.attachControl(canvas, true);
+	
+	camera.rotation = new BABYLON.Vector3( 0.7465, 0.5184, 0);
+	camera.speed = 5;
+	
+	//Aiming
+	camera.angularSensibility = 1000;
+	camera.inertia = 0.2;
+	
+	camera.keysDown = [83];
+	camera.keysUp = [87];
+	camera.keysLeft = [65];
+	camera.keysRight = [68];
+}
 
 function setupCamera(){
 	
@@ -37,7 +54,7 @@ function movementLogic(){
 	trackingBox.isPickable = false;
 
 	//Define player's collision zone
-	trackingBox.ellipsoid = new BABYLON.Vector3(0.75, 2.0, 0.75);
+	trackingBox.ellipsoid = new BABYLON.Vector3(0.75, 1.85, 0.75);
 			
 		
 	
