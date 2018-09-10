@@ -21,14 +21,25 @@ function initializeBabylon(){
 	// 		**************  LOADING  **************
 	var assetsManager = new BABYLON.AssetsManager(scene);
 	
-	
-	
-	
-	// LOADING FINISHED!
+	var meshTask1 = assetsManager.addMeshTask("meshTask1", "", "/serving/meshes/", "lobby.babylon");
+	meshTask1.onSuccess = function (task) {
+		// Scene meshes
+		importedMeshes = task.loadedMeshes;
+		// Setup the scene!
+		setupWorld();
+	}
+
+	/*var audioTask1 = assetsManager.addBinaryFileTask("audioTask1", "serving/sounds/effects/block.wav");
+	audioTask1.onSuccess = function (task) {
+		block = new BABYLON.Sound("block", task.data, scene, null, {volume: 4});
+	}*/
+	// 		***********  LOADING DONE!  ***********
 	
 	assetsManager.onFinish = function (tasks) {
 		engine.runRenderLoop(function () {
 			scene.render();
+			// Print FPS
+			//console.log(engine.getFps().toFixed());
 		});
 	};
 	
@@ -38,7 +49,17 @@ function initializeBabylon(){
 
 
 
-function createWorld(){
+function setupWorld(){
+	
+	// ----Optimization----
+	// 
+	//	freeze matrices
+	//	delete backfaces
+	//  1 time shadow render
+	//
+	//
+	
+	
 	
 	//Scene Background Color
 	scene.clearColor = new BABYLON.Color3(0.45,0.75,1);
@@ -46,8 +67,29 @@ function createWorld(){
 	// Enable Collisions
     scene.collisionsEnabled = true;
 	
+	// New rendering Pipeline
+	var pipeline = new BABYLON.DefaultRenderingPipeline(
+		"default", // The name of the pipeline
+		true, // Do you want HDR textures ?
+		scene, // The scene instance
+		[camera] // The list of cameras to be attached to
+	);
+	
+	// --Render Quality--
+	
+	// *LOW
+	// nothing here
+	
+	// *MEDIUM
+	//pipeline.fxaaEnabled = true;
+	//pipeline.bloomEnabled = true;
+	
+	// *HIGH QUALITY
+	pipeline.samples = 4;
+	pipeline.bloomEnabled = true;
+	
 	// Light0
-	light0 = new BABYLON.SpotLight("light0", new BABYLON.Vector3(90, 100, -72), new BABYLON.Vector3(0, -1, 1), 1.25, 2, scene);
+	light0 = new BABYLON.SpotLight("light0", new BABYLON.Vector3(90, 100, -100), new BABYLON.Vector3(0, -1, 1), 1.25, 2, scene);
 	light0.diffuse = new BABYLON.Color3(1, 1, 1);
 	light0.specular = new BABYLON.Color3(0.75, 0.75, 0.75);
 	light0.groundColor = new BABYLON.Color3(0, 0, 0);
@@ -58,6 +100,27 @@ function createWorld(){
 	godrays.mesh.material.diffuseTexture.hasAlpha = true;
 	godrays.mesh.position = light0.position;
 	godrays.mesh.scaling = new BABYLON.Vector3(13, 13, 13);
+	
+	
+	// Light boxes??
+	
+	var myBox = BABYLON.MeshBuilder.CreateBox("myBox", {height: 4.5, width: 1, depth: 1}, scene);
+	myBox.position = new BABYLON.Vector3(50,1,0);
+	myBox.material = new BABYLON.StandardMaterial("myBox", scene);
+	myBox.material.diffuseColor = new BABYLON.Color3(0, 0, 0);
+	myBox.material.specularColor = new BABYLON.Color3(0, 0, 0);
+	myBox.material.emissiveColor = new BABYLON.Color3(1, 0.25, 0.25);
+	
+	var light1 = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+	light1.diffuse = new BABYLON.Color3(1, 0.15, 0.15);
+	light1.specular = new BABYLON.Color3(1, 0.15, 0.15);
+	light1.position = new BABYLON.Vector3(50,1,0);
+	light1.range = 3.5;
+	light1.intensity = 2;
+	
+	
+	
+	
 	
 	// Light Tracker
 	/*var lightTracker = BABYLON.MeshBuilder.CreateSphere("lightTracker", {diameter: 5, diameterX: 5}, scene);
@@ -75,71 +138,70 @@ function createWorld(){
 	shadowGenerator.contactHardeningLightSizeUVRatio = 0.4;
 	shadowGenerator.setDarkness(0.35);
 	
-
+	// Shadow Bias!! 
+	// ** Play with these once new columns are placed
+	//
+	shadowGenerator.bias = 0.0001;
+	//shadowGenerator.normalBias = 0.01;
+	
+	
+	
 	// Materials
 	var startMat = new BABYLON.StandardMaterial("startMat", scene);
 	startMat.diffuseColor = new BABYLON.Color3(0, 0, 0);
 	startMat.specularColor = new BABYLON.Color3(0, 0, 0);
 	startMat.emissiveColor = new BABYLON.Color3(1, 1, 1);
-	
-	
-	ring2 = new BABYLON.StandardMaterial("ring2", scene);
-	ring2.diffuseColor = new BABYLON.Color3(1, 1, 1);
-	ring2.specularColor = new BABYLON.Color3(0.2, 0.2, 0.2);
-	ring2.emissiveColor = new BABYLON.Color3(0, 0, 0);
-	
-	ring4= new BABYLON.StandardMaterial("ring4", scene);
-	ring4.diffuseColor = new BABYLON.Color3(1, 1, 0.75);
-	ring4.specularColor = new BABYLON.Color3(0.35, 0.35, 0.35);
-	ring4.emissiveColor = new BABYLON.Color3(0.1, 0.1, 0);
-	
 
-	// Import Blender scene
-	BABYLON.SceneLoader.ImportMesh("", "/serving/meshes/", "lobby.babylon", scene, function (newMeshes) {
-		
-		console.log(newMeshes);
-		
-		
-		for(var x=0; x<newMeshes.length; x++){
-		
-			newMeshes[x].checkCollisions = true;
+	// Configure Blender scene
+	for(var x=0; x<importedMeshes.length; x++){
 
-			if(newMeshes[x].id=="startBox"){
-				newMeshes[x].material = startMat;
-			}else if(newMeshes[x].id=="ring1"){
-				newMeshes[x].material.specularColor = new BABYLON.Color3(0.2, 0.2, 0.2);
-				newMeshes[x].receiveShadows = true;
-			}else if(newMeshes[x].id=="ring2"){
-				newMeshes[x].material = ring2;
-				newMeshes[x].receiveShadows = true;
-			}else if(newMeshes[x].id=="ring3"){
-				newMeshes[x].material.specularColor = new BABYLON.Color3(0.5, 0.5, 0.5);
-				newMeshes[x].material.emissiveColor = new BABYLON.Color3(0.2, 0.2, 0.2);
-				newMeshes[x].receiveShadows = true;
-			}else if(newMeshes[x].id=="ring4"){
-				newMeshes[x].material = ring4;
-				newMeshes[x].receiveShadows = true;
-			}else if(newMeshes[x].id=="lobbyCylinder"){
-				//shadowGenerator.addShadowCaster(newMeshes[x]);
-				newMeshes[x].receiveShadows = true;
-			}else if(newMeshes[x].id.substring(0,6)=="colBox"){
-				newMeshes[x].visibility = false;
-			}else{
-				shadowGenerator.addShadowCaster(newMeshes[x]);
-			}
+		// Collisions
+		importedMeshes[x].checkCollisions = true;
+		
+		
+		// Shading
+		if(importedMeshes[x].id!="startBox"){
+			importedMeshes[x].receiveShadows = true;
+			shadowGenerator.addShadowCaster(importedMeshes[x]);
 		}
 		
-	});
-	
+		
+		// Materials
+		if(importedMeshes[x].id=="startBox"){
+			importedMeshes[x].material = startMat;
+		}else if(importedMeshes[x].id=="startBoxDoorway"){
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+		}else if(importedMeshes[x].id=="ring1"){
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0.1, 0.1, 0.1);
+		}else if(importedMeshes[x].id=="ring2"){
+			
+		}else if(importedMeshes[x].id=="ring3"){
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+		}else if(importedMeshes[x].id=="ring4"){
+			
+		}else if(importedMeshes[x].id=="lobbyCylinder"){
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+		}else if(importedMeshes[x].id.substring(0,8)=="lobbyTop"){
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+		}else if(importedMeshes[x].id.substring(0,4)=="cBox" || importedMeshes[x].id=="mapBox"){
+			importedMeshes[x].visibility = false;
+		}else if(importedMeshes[x].id.substring(0,3)=="col"){
+			
+		}else if(importedMeshes[x].id=="mapStand"){
+			importedMeshes[x].material = new BABYLON.StandardMaterial("standMat", scene);
+			importedMeshes[x].material.diffuseColor = new BABYLON.Color3(0.05, 0.05, 0.05);
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+		}else if(importedMeshes[x].id=="map"){
+			importedMeshes[x].material.emissiveColor = new BABYLON.Color3(0.3, 0.3, 0.3);
+		}
+		
+	}
+
+
+
+
 
 	
-	
-	
-	
-	
-	
-	
-    
 	
     
 }

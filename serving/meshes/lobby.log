@@ -7,7 +7,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		texture directory:  C:\Users\Brokan\Desktop\Museum-of-Brokan\serving\meshes\
 	Python World class constructor completed
 	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
-	processing begun of mesh:  colBox2
+	processing begun of mesh:  mapBox
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -15,17 +15,40 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  lobbyTop
-		WARNING: No materials have been assigned: 
-		num positions      :  512
-		num normals        :  512
-		num uvs            :  0
+	processing begun of mesh:  map
+		processing begun of Standard material:  Material.002
+			Diffuse texture found "Texture.003"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num uvs            :  8
 		num uvs2           :  0
 		num colors         :  0
-		num indices        :  3072
+		num indices        :  6
+	processing begun of mesh:  lobbyTop2
+		processing begun of Standard material:  Material.001
+			Diffuse texture found "Texture"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+	WARNING: Error encountered processing image file:  , Error:  'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\whitePlaster.jpg' and 'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\whitePlaster.jpg' are the same file
+		num positions      :  1032
+		num normals        :  1032
+		num uvs            :  2064
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3084
+	processing begun of mesh:  lobbyCylinder
+		processing begun of Standard material:  Material
+			Diffuse texture found "Texture.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  14
+		num normals        :  14
+		num uvs            :  28
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
 	processing begun of mesh:  ring3
-		processing begun of Standard material:  Material.009
-			Diffuse texture found "Texture.006"
+		processing begun of Standard material:  Material.006
+			Diffuse texture found "Texture.017"
 				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
 		num positions      :  528
 		num normals        :  528
@@ -33,179 +56,75 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  1584
-	processing begun of mesh:  ring2
+	processing begun of mesh:  ring4
+		processing begun of Standard material:  Material.013
+			Diffuse texture found "Texture.002"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+	WARNING: Error encountered processing image file:  , Error:  'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\medallion.png' and 'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\medallion.png' are the same file
+		num positions      :  264
+		num normals        :  264
+		num uvs            :  528
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  786
+	processing begun of mesh:  lobbyTop1
+		registered as also a user of material:  Material.001
+		num positions      :  1026
+		num normals        :  1026
+		num uvs            :  2052
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  3078
+	processing begun of mesh:  cBox2
 		WARNING: No materials have been assigned: 
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  ring2
+		processing begun of Standard material:  Material.010
+			Diffuse texture found "Texture.014"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+	WARNING: Error encountered processing image file:  , Error:  'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\marble1.jpg' and 'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\marble1.jpg' are the same file
 		num positions      :  528
 		num normals        :  528
-		num uvs            :  0
+		num uvs            :  1056
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  1584
 	processing begun of mesh:  ring1
-		processing begun of Standard material:  Material.003
-			Diffuse texture found "Texture.003"
+		processing begun of Standard material:  Material.012
+			Diffuse texture found "Texture.007"
 				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+	WARNING: Error encountered processing image file:  , Error:  'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\tiledMarble.jpg' and 'C:\\Users\\Brokan\\Desktop\\Museum-of-Brokan\\serving\\meshes\\tiledMarble.jpg' are the same file
+			Bump texture found "Texture.010"
+				Image texture found, type:  bumpTexture, mapped using: "UVMap"
 		num positions      :  640
 		num normals        :  640
 		num uvs            :  1280
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  1920
-	processing begun of mesh:  ring4
-		WARNING: No materials have been assigned: 
-		num positions      :  796
-		num normals        :  796
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  2382
-		WARNING: # of 0 area faces found:  532
-	processing begun of mesh:  lobbyCylinder
-		WARNING: No materials have been assigned: 
-		num positions      :  520
-		num normals        :  520
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  3120
-		WARNING: # of 0 area faces found:  520
 	processing begun of mesh:  startBox
 		WARNING: No materials have been assigned: 
-		num positions      :  28
-		num normals        :  28
+		num positions      :  19
+		num normals        :  19
 		num uvs            :  0
 		num uvs2           :  0
 		num colors         :  0
-		num indices        :  48
-	processing begun of mesh:  Column3_bot and top
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
+		num indices        :  51
+		WARNING: # of 0 area faces found:  1
+	processing begun of mesh:  startBoxDoorway
+		registered as also a user of material:  Material
+		num positions      :  1052
+		num normals        :  1052
+		num uvs            :  2104
 		num uvs2           :  0
 		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_mid
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_bot and top.001
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_mid.001
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_bot and top.003
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_bot and top.002
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_mid.003
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_mid.002
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_bot and top.005
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_bot and top.004
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_mid.005
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_mid.004
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_bot and top.007
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_bot and top.006
-		WARNING: No materials have been assigned: 
-		num positions      :  32
-		num normals        :  32
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  168
-	processing begun of mesh:  Column3_mid.007
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  Column3_mid.006
-		WARNING: No materials have been assigned: 
-		num positions      :  6272
-		num normals        :  6272
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  36864
-	processing begun of mesh:  colBox1
+		num indices        :  3126
+	processing begun of mesh:  cBox1
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -213,7 +132,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  colBox6
+	processing begun of mesh:  cBox6
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -221,7 +140,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  colBox5
+	processing begun of mesh:  cBox5
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -229,7 +148,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  colBox4
+	processing begun of mesh:  cBox4
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -237,7 +156,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  colBox3
+	processing begun of mesh:  cBox3
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -245,7 +164,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  colBox7
+	processing begun of mesh:  cBox7
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -253,7 +172,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
-	processing begun of mesh:  colBox8
+	processing begun of mesh:  cBox8
 		WARNING: No materials have been assigned: 
 		num positions      :  8
 		num normals        :  8
@@ -261,7 +180,207 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  36
+	processing begun of mesh:  col1
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col1Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col1Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col2
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col2Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col2Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col5
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col5Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col5Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col6
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col6Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col6Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col7
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col7Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col7Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col8
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col8Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col8Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col3
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col3Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col3Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col4
+		WARNING: No materials have been assigned: 
+		num positions      :  5824
+		num normals        :  5824
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  34560
+	processing begun of mesh:  col4Bot
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col4Top
+		WARNING: No materials have been assigned: 
+		num positions      :  208
+		num normals        :  208
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  mapStand
+		WARNING: No materials have been assigned: 
+		num positions      :  240
+		num normals        :  240
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  648
 ========= Writing of scene file started =========
 ========= Writing of scene file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.0797 secs
+elapsed time:  0 min, 4.0247 secs

@@ -6,12 +6,21 @@ var canvas;
 var engine; 
 var scene; 
 
-//P1's vars
+// P1's vars
 var camera;
 var trackingBox;
 
-var ring1, ring2, ring3, ring4, light0, shadowgenerator;
+// Meshes imported from Blender scene
+var importedMeshes;
 
+
+
+var light0;
+
+
+
+// Global lighting value
+//var gl = 0.00001;
 
 // Movement related vars
 var inclinedMeshes = [];
@@ -33,6 +42,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	}else{
 		spectateCamera();
 	}
-	
-	createWorld();
 });

@@ -5,7 +5,7 @@ function spectateCamera(){
 	camera.attachControl(canvas, true);
 	
 	camera.rotation = new BABYLON.Vector3( 0.7465, 0.5184, 0);
-	camera.speed = 5;
+	camera.speed = 15;
 	
 	//Aiming
 	camera.angularSensibility = 1000;
