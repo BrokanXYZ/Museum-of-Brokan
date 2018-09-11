@@ -1,7 +1,6 @@
 
 function spectateCamera(){
 	camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(45, 71, -48), scene);
-	//camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(0, 10, 0), scene);
 	camera.attachControl(canvas, true);
 	
 	camera.rotation = new BABYLON.Vector3( 0.7465, 0.5184, 0);
@@ -203,19 +202,24 @@ function movementLogic(){
 		}
 		
 		// Cast ray to check player's surface
-		checkPlayersSurface();
+		//checkPlayersSurface();
 		
 		// Make the move!
-		if(onInclinedSurface.hit){
+		/*if(onInclinedSurface.hit){
 			// Without gravity
 			trackingBox.moveWithCollisions(new BABYLON.Vector3(xMovement*animRatio, 0, zMovement*animRatio));
 			// Adjust y position so that player smoothly traverses
 			trackingBox.position.y = nextPosOnInclinedMesh();
-		}else{
-			//console.log("rot: " + trackingBox.rotation.y);
-			//console.log("zMOVE: " + playerSpeed);
+		}else{*/
 			// With gravity
 			trackingBox.moveWithCollisions(new BABYLON.Vector3(xMovement*animRatio, gravity, zMovement*animRatio));
+		//}
+		
+		// Is the player moving?
+		if((xMovement==0 && zMovement==0) || camera.position.equals(trackingBox.position)){
+			playerIsMoving = false;
+		}else{
+			playerIsMoving = true;
 		}
 		
 		// Camera will follow player's tracking box
@@ -226,21 +230,5 @@ function movementLogic(){
 		// Player rotation
 		trackingBox.rotation.y = camera.rotation.y;
 		
-	}); 
-	
-	
-	
-	
-	
-		
-		
-		
-		
-		
-		
-
-
-
-
-	
+	}); 	
 }

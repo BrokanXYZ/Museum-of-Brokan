@@ -13,11 +13,12 @@ var trackingBox;
 // Meshes imported from Blender scene
 var importedMeshes;
 
-
-
+// lobby spotlight (sun)
 var light0;
 
-
+// Audio
+var lobbbyMusic;
+var footsteps;
 
 // Global lighting value
 //var gl = 0.00001;
@@ -25,8 +26,9 @@ var light0;
 // Movement related vars
 var inclinedMeshes = [];
 var onInclinedSurface = false;
-var playerSpeed = 1;
+var playerSpeed = 0.65;
 var gravity = -0.2;
+var playerIsMoving = false;
 var moveForward = false;
 var moveBack = false;
 var moveLeft = false;

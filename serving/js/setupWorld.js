@@ -29,17 +29,36 @@ function initializeBabylon(){
 		setupWorld();
 	}
 
-	/*var audioTask1 = assetsManager.addBinaryFileTask("audioTask1", "serving/sounds/effects/block.wav");
+	var audioTask1 = assetsManager.addBinaryFileTask("audioTask1", "serving/sounds/tracks/Waterwalk.mp3");
 	audioTask1.onSuccess = function (task) {
-		block = new BABYLON.Sound("block", task.data, scene, null, {volume: 4});
-	}*/
+		lobbyMusic = new BABYLON.Sound("lobbyMusic", task.data, scene, null, {volume: 0.3, autoplay: true, loop: true, spatialSound: true});
+		lobbyMusic.setPosition(new BABYLON.Vector3(80, 2, 0));
+		lobbyMusic.maxDistance = 15;
+	}
+	
+	var audioTask2 = assetsManager.addBinaryFileTask("audioTask2", "serving/sounds/effects/footsteps.mp3");
+	audioTask2.onSuccess = function (task) {
+		footsteps = new BABYLON.Sound("footsteps", task.data, scene, null, {volume: 0.5, loop: true});
+	}
 	// 		***********  LOADING DONE!  ***********
 	
 	assetsManager.onFinish = function (tasks) {
 		engine.runRenderLoop(function () {
+			
 			scene.render();
+			
 			// Print FPS
 			//console.log(engine.getFps().toFixed());
+			
+			// Footsteps audio
+			if(!footsteps.isPlaying && playerIsMoving && (moveForward || moveBack || moveRight || moveLeft)){
+				footsteps.play();
+			}else if(footsteps.isPlaying && !playerIsMoving){
+				footsteps.stop();
+			}
+			
+			
+			
 		});
 	};
 	
@@ -62,7 +81,7 @@ function setupWorld(){
 	
 	
 	//Scene Background Color
-	scene.clearColor = new BABYLON.Color3(0.45,0.75,1);
+	scene.clearColor = new BABYLON.Color3(0.35,0.65,0.9);
 	
 	// Enable Collisions
     scene.collisionsEnabled = true;
@@ -102,31 +121,31 @@ function setupWorld(){
 	godrays.mesh.scaling = new BABYLON.Vector3(13, 13, 13);
 	
 	
-	// Light boxes??
+	// lobby door lights
 	
-	var myBox = BABYLON.MeshBuilder.CreateBox("myBox", {height: 4.5, width: 1, depth: 1}, scene);
-	myBox.position = new BABYLON.Vector3(50,1,0);
-	myBox.material = new BABYLON.StandardMaterial("myBox", scene);
-	myBox.material.diffuseColor = new BABYLON.Color3(0, 0, 0);
-	myBox.material.specularColor = new BABYLON.Color3(0, 0, 0);
-	myBox.material.emissiveColor = new BABYLON.Color3(1, 0.25, 0.25);
+	var light1 = new BABYLON.PointLight("light1", new BABYLON.Vector3(79.6, 2, 61), scene);
+	light1.diffuse = new BABYLON.Color3(0.15, 0.15, 1);
+	light1.specular = new BABYLON.Color3(0.15, 0.15, 1);
+	light1.range = 25;
+	light1.intensity = 1;
 	
-	var light1 = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 1, 0), scene);
-	light1.diffuse = new BABYLON.Color3(1, 0.15, 0.15);
-	light1.specular = new BABYLON.Color3(1, 0.15, 0.15);
-	light1.position = new BABYLON.Vector3(50,1,0);
-	light1.range = 3.5;
-	light1.intensity = 2;
+	var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(79.6,2,-61), scene);
+	light2.diffuse = new BABYLON.Color3(1, 0.6, 0.15);
+	light2.specular = new BABYLON.Color3(1, 0.6, 0.15);
+	light2.range = 25;
+	light2.intensity = 1;
 	
-	
-	
-	
+	var light3 = new BABYLON.PointLight("light3", new BABYLON.Vector3(140, 2, 0), scene);
+	light3.diffuse = new BABYLON.Color3(0.15, 1, 0.15);
+	light3.specular = new BABYLON.Color3(0.15, 0.15, 1);
+	light3.range = 25;
+	light3.intensity = 1;
 	
 	// Light Tracker
-	/*var lightTracker = BABYLON.MeshBuilder.CreateSphere("lightTracker", {diameter: 5, diameterX: 5}, scene);
+	/*var lightTracker = BABYLON.MeshBuilder.CreateSphere("lightTracker", {diameter: .5, diameterX: .5}, scene);
 
 	engine.runRenderLoop(function () {
-		lightTracker.position = light0.position;
+		lightTracker.position = light3.position;
 	});*/
 
 	
@@ -141,7 +160,10 @@ function setupWorld(){
 	// Shadow Bias!! 
 	// ** Play with these once new columns are placed
 	//
-	shadowGenerator.bias = 0.0001;
+	//shadowGenerator.bias = 0.0001;
+	
+	shadowGenerator.bias = 0.00001;
+	
 	//shadowGenerator.normalBias = 0.01;
 	
 	
@@ -192,7 +214,22 @@ function setupWorld(){
 			importedMeshes[x].material.diffuseColor = new BABYLON.Color3(0.05, 0.05, 0.05);
 			importedMeshes[x].material.specularColor = new BABYLON.Color3(0.5, 0.5, 0.5);
 		}else if(importedMeshes[x].id=="map"){
-			importedMeshes[x].material.emissiveColor = new BABYLON.Color3(0.3, 0.3, 0.3);
+			importedMeshes[x].material.emissiveColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+		}else if(importedMeshes[x].id=="door1"){
+			importedMeshes[x].material = new BABYLON.StandardMaterial("door1", scene);
+			importedMeshes[x].material.diffuseColor = new BABYLON.Color3(0.15, 0.15, 0.15);
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+			importedMeshes[x].material.emissiveColor = new BABYLON.Color3(0.25, 1, 0.25);
+		}else if(importedMeshes[x].id=="door2"){
+			importedMeshes[x].material = new BABYLON.StandardMaterial("door2", scene);
+			importedMeshes[x].material.diffuseColor = new BABYLON.Color3(0.15, 0.15, 0.15);
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+			importedMeshes[x].material.emissiveColor = new BABYLON.Color3(1, 0.65, 0.25);
+		}else if(importedMeshes[x].id=="door3"){
+			importedMeshes[x].material = new BABYLON.StandardMaterial("door3", scene);
+			importedMeshes[x].material.diffuseColor = new BABYLON.Color3(0.15, 0.15, 0.15);
+			importedMeshes[x].material.specularColor = new BABYLON.Color3(0, 0, 0);
+			importedMeshes[x].material.emissiveColor = new BABYLON.Color3(0.25, 0.25, 1);
 		}
 		
 	}

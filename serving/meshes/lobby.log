@@ -7,6 +7,22 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		texture directory:  C:\Users\Brokan\Desktop\Museum-of-Brokan\serving\meshes\
 	Python World class constructor completed
 	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Cube
+		WARNING: No materials have been assigned: 
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  door1
+		WARNING: No materials have been assigned: 
+		num positions      :  64
+		num normals        :  64
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
 	processing begun of mesh:  mapBox
 		WARNING: No materials have been assigned: 
 		num positions      :  8
@@ -17,7 +33,7 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num indices        :  36
 	processing begun of mesh:  map
 		processing begun of Standard material:  Material.002
-			Diffuse texture found "Texture.003"
+			Diffuse texture found "Texture.004"
 				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
 		num positions      :  4
 		num normals        :  4
@@ -188,22 +204,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col1Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col1Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  col2
 		WARNING: No materials have been assigned: 
 		num positions      :  5824
@@ -212,22 +212,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col2Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col2Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  col5
 		WARNING: No materials have been assigned: 
 		num positions      :  5824
@@ -236,22 +220,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col5Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col5Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  col6
 		WARNING: No materials have been assigned: 
 		num positions      :  5824
@@ -260,22 +228,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col6Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col6Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  col7
 		WARNING: No materials have been assigned: 
 		num positions      :  5824
@@ -284,22 +236,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col7Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col7Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  col8
 		WARNING: No materials have been assigned: 
 		num positions      :  5824
@@ -309,18 +245,12 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num colors         :  0
 		num indices        :  34560
 	processing begun of mesh:  col8Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col8Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
+		processing begun of Standard material:  Material.003
+			Diffuse texture found "Texture.005"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  324
@@ -332,22 +262,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col3Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col3Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  col4
 		WARNING: No materials have been assigned: 
 		num positions      :  5824
@@ -356,22 +270,6 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  34560
-	processing begun of mesh:  col4Bot
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
-	processing begun of mesh:  col4Top
-		WARNING: No materials have been assigned: 
-		num positions      :  208
-		num normals        :  208
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num indices        :  324
 	processing begun of mesh:  mapStand
 		WARNING: No materials have been assigned: 
 		num positions      :  240
@@ -380,7 +278,173 @@ Exporter version: 5.4.2, Blender version: 2.79 (sub 0)
 		num uvs2           :  0
 		num colors         :  0
 		num indices        :  648
+	processing begun of mesh:  door2
+		WARNING: No materials have been assigned: 
+		num positions      :  64
+		num normals        :  64
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
+	processing begun of mesh:  door3
+		WARNING: No materials have been assigned: 
+		num positions      :  64
+		num normals        :  64
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  132
+	processing begun of mesh:  col8Top
+		processing begun of Standard material:  Material.004
+			Diffuse texture found "Texture.006"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col7Top
+		processing begun of Standard material:  Material.007
+			Diffuse texture found "Texture.009"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col6Top
+		processing begun of Standard material:  Material.008
+			Diffuse texture found "Texture.011"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col5Top
+		processing begun of Standard material:  Material.009
+			Diffuse texture found "Texture.012"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col4Top
+		processing begun of Standard material:  Material.011
+			Diffuse texture found "Texture.013"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col3Top
+		processing begun of Standard material:  Material.014
+			Diffuse texture found "Texture.015"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col2Top
+		processing begun of Standard material:  Material.015
+			Diffuse texture found "Texture.016"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col1Top
+		processing begun of Standard material:  Material.016
+			Diffuse texture found "Texture.018"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col7Bot
+		processing begun of Standard material:  Material.017
+			Diffuse texture found "Texture.019"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col6Bot
+		processing begun of Standard material:  Material.018
+			Diffuse texture found "Texture.020"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col5Bot
+		processing begun of Standard material:  Material.019
+			Diffuse texture found "Texture.021"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col4Bot
+		processing begun of Standard material:  Material.020
+			Diffuse texture found "Texture.022"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col3Bot
+		processing begun of Standard material:  Material.021
+			Diffuse texture found "Texture.023"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col2Bot
+		processing begun of Standard material:  Material.022
+			Diffuse texture found "Texture.024"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
+	processing begun of mesh:  col1Bot
+		processing begun of Standard material:  Material.023
+			Diffuse texture found "Texture.025"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  324
 ========= Writing of scene file started =========
 ========= Writing of scene file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.0247 secs
+elapsed time:  0 min, 4.0427 secs
